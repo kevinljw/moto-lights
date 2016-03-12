@@ -1,0 +1,14 @@
+extends layout_black
+
+block content
+	#divtoBlink.circle.right-light
+		if state=='straight'
+			i.lg_icon.fa.fa-arrow-up
+		else if state=='r_blink'
+			if num_value!=0
+				h2.lg_num #{num_value}
+				if num_value
+					h6.sm_text m
+			else
+				i.lg_icon.fa.fa-arrow-right
+	h6.hint_text_r #{state} : #{num_value}
