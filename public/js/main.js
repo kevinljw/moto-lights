@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
   // Place JavaScript code here...
-  console.log(webTitle);
-  console.log(cp_state);
+  // console.log(webTitle);
+  // console.log(cp_state);
 
   if(typeof cp_state != undefined && webTitle=='Left Light'){
   	
