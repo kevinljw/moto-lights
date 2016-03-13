@@ -118,6 +118,7 @@ app.post('/right_blink/:val',homeController.blink_right);
 app.post('/left_blink/:val',homeController.blink_left);
 app.post('/idle',homeController.set_idle);
 app.post('/straight',homeController.set_straight);
+app.post('/mirror',homeController.set_Mirror);
 
 
 app.get('/login', userController.getLogin);

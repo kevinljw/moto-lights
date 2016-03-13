@@ -76,3 +76,10 @@ exports.set_straight = function(req, res) {
     state: center_state
   });
 };
+exports.set_Mirror = function(req, res) {
+  center_state = 'mirror';
+  res.render('control_panel', {
+    title: 'Control Panel',
+    state: center_state
+  });
+};

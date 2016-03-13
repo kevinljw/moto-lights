@@ -117,6 +117,16 @@ textarea {
     display: inline-block;
     margin-top: 70px;
 }
+.rotateR {
+    -ms-transform: rotate(30deg); /* IE 9 */
+    -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+    transform: rotate(30deg);
+}
+.rotateL {
+    -ms-transform: rotate(-30deg); /* IE 9 */
+    -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+    transform: rotate(-30deg);
+}
 .circle > h6{
 
     font-size: 40px;
