@@ -57,6 +57,9 @@ block content
     } else {
       video.src = 'somevideo.webm'; // fallback.
     }
+    var errorCallback = function(e) {
+      console.log('Reeeejected!', e);
+    };
 
   
   
