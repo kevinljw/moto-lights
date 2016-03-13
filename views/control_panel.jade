@@ -51,7 +51,7 @@ block content
     var video = document.querySelector('video');
 
     if (navigator.getUserMedia) {
-      navigator.getUserMedia({audio: true, video: false}, function(stream) {
+      navigator.getUserMedia('video', function(stream) {
         video.src = window.URL.createObjectURL(stream);
       }, errorCallback);
     } else {
