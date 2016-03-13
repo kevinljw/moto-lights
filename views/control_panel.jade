@@ -51,15 +51,12 @@ block content
     var video = document.querySelector('video');
 
     if (navigator.getUserMedia) {
-      navigator.getUserMedia({video: true}, function(stream) {
+      navigator.getUserMedia({video:true, audio:false}, function(stream) {
         video.src = window.URL.createObjectURL(stream);
-      }, errorCallback);
+      });
     } else {
       video.src = 'somevideo.webm'; // fallback.
     }
-    var errorCallback = function(e) {
-      console.log('Reeeejected!', e);
-    };
 
   
   
