@@ -41,22 +41,4 @@ block content
       button.col-xs-12.btn.btn-primary(type='submit', style='height:70px;')
         | Right 50
         i.fa.fa-arrow-circle-right
-  video(autoplay)
-  script.
-    navigator.getUserMedia  = navigator.getUserMedia ||
-                              navigator.webkitGetUserMedia ||
-                              navigator.mozGetUserMedia ||
-                              navigator.msGetUserMedia;
-
-    var video = document.querySelector('video');
-
-    if (navigator.getUserMedia) {
-      navigator.getUserMedia({video:true, audio:false}, function(stream) {
-        video.src = window.URL.createObjectURL(stream);
-      });
-    } else {
-      video.src = 'somevideo.webm'; // fallback.
-    }
-
-  
   

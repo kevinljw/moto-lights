@@ -11,6 +11,26 @@ block content
 					h6.sm_text m
 			else
 				i.lg_icon.fa.fa-arrow-left
-				
+		else if state=='mirror'
+			video(autoplay)
+
 	h6.hint_text_l #{state} : #{num_value}
-	
+
+	script.
+		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+		if (navigator.getUserMedia) {
+			navigator.getUserMedia({ audio: false, video: true },
+					function(stream) {
+						var video = document.querySelector('video');
+						video.src = window.URL.createObjectURL(stream);
+						//- video.onloadedmetadata = function(e) {
+						//- 	video.play();
+						//- };
+					},
+					function(err) {
+						console.log("The following error occurred: " + err.name);
+					}
+			);
+		} else {
+			console.log("getUserMedia not supported");
+		}	
