@@ -2,20 +2,21 @@ extends layout
 
 block content 
   h5.text-center #{state}
-  form.col-xs-offset-2.col-xs-8.form-horizontal(action='/idle', method='POST')
-    input(type='hidden', name='_csrf', value=_csrf)
-    .form-group  
-      button.col-xs-12.btn.btn-primary(type='submit')
-        | Reset
   form.col-xs-offset-2.col-xs-8.form-horizontal(action='/mirror', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group  
-      button.col-xs-12.btn.btn-primary(type='submit', style='height:70px;')
+      button.col-xs-12.btn.btn-primary(type='submit')
         | Mirror
+  form.col-xs-offset-2.col-xs-8.form-horizontal(action='/idle', method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    .form-group  
+      button.col-xs-12.btn.btn-primary(type='submit', style='height:70px;')
+        | Reset
+  
   form.col-xs-offset-2.col-xs-8.form-horizontal(action='/straight', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group  
-      button.col-xs-12.btn.btn-primary(type='submit')
+      button.col-xs-12.btn.btn-primary(type='submit', style='height:70px;')
         | Straight
   form.col-xs-offset-1.col-xs-5.form-horizontal(action='/left_blink/1', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
