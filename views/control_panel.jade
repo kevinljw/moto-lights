@@ -23,7 +23,7 @@ block content
   form.col-xs-offset-1.col-xs-5.form-horizontal(action='/left_blink/1', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group
-      button.col-xs-11.btn.btn-success(type='submit', style='height:70px;font-weight:900;font-size:26px;')
+      button.col-xs-11.btn.btn-warning(type='submit', style='height:70px;font-weight:900;font-size:26px;')
         i.fa.fa-arrow-circle-left
         | 左轉燈
   form.col-xs-5.form-horizontal(action='/right_blink/1', method='POST')
@@ -41,7 +41,7 @@ block content
   form.col-xs-5.form-horizontal(action='/right_blink/50', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group  
-      button.col-xs-11.btn.btn-warning(type='submit', style='height:70px;font-weight:900;font-size:26px;')
+      button.col-xs-11.btn.btn-success(type='submit', style='height:70px;font-weight:900;font-size:26px;')
         | 右轉倒數
         i.fa.fa-arrow-circle-right
   br
