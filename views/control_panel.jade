@@ -1,45 +1,52 @@
 extends layout
 
 block content 
-  h5.text-center #{state}
-  form.col-xs-offset-2.col-xs-8.form-horizontal(action='/mirror', method='POST')
-    input(type='hidden', name='_csrf', value=_csrf)
-    .form-group  
-      button.col-xs-12.btn.btn-primary(type='submit')
-        | Mirror
+  //- h5.text-center #{state}
+  h1.text-center(style='font-weight:900;font-size:80px;') 請 按 我
+  //- form.col-xs-offset-2.col-xs-8.form-horizontal(action='/mirror', method='POST')
+  //-   input(type='hidden', name='_csrf', value=_csrf)
+  //-   .form-group  
+  //-     button.col-xs-12.btn.btn-primary(type='submit')
+  //-       | Mirror
+  hr
   form.col-xs-offset-2.col-xs-8.form-horizontal(action='/idle', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group  
-      button.col-xs-12.btn.btn-primary(type='submit', style='height:70px;')
-        | Reset
+      button.col-xs-12.btn.btn-info(type='submit', style='height:40px;font-weight:900;font-size:15px;')
+        | 關燈
   
   form.col-xs-offset-2.col-xs-8.form-horizontal(action='/straight', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group  
-      button.col-xs-12.btn.btn-primary(type='submit', style='height:70px;')
-        | Straight
+      button.col-xs-12.btn.btn-primary(type='submit', style='height:70px;font-weight:900;font-size:26px;')
+        | 直行
   form.col-xs-offset-1.col-xs-5.form-horizontal(action='/left_blink/1', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group
-      button.col-xs-12.btn.btn-primary(type='submit', style='height:70px;')
+      button.col-xs-11.btn.btn-success(type='submit', style='height:70px;font-weight:900;font-size:26px;')
         i.fa.fa-arrow-circle-left
-        | Left 0
+        | 左轉燈
   form.col-xs-5.form-horizontal(action='/right_blink/1', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group  
-      button.col-xs-12.btn.btn-primary(type='submit', style='height:70px;')
-        | Right 0 
+      button.col-xs-11.btn.btn-success(type='submit', style='height:70px;font-weight:900;font-size:30px;')
+        | 右轉燈 
         i.fa.fa-arrow-circle-right
   form.col-xs-offset-1.col-xs-5.form-horizontal(action='/left_blink/50', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group
-      button.col-xs-12.btn.btn-primary(type='submit', style='height:70px;')
+      button.col-xs-11.btn.btn-warning(type='submit', style='height:70px;font-weight:900;font-size:26px;')
         i.fa.fa-arrow-circle-left
-        | Left 50
+        | 左轉倒數
   form.col-xs-5.form-horizontal(action='/right_blink/50', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group  
-      button.col-xs-12.btn.btn-primary(type='submit', style='height:70px;')
-        | Right 50
+      button.col-xs-11.btn.btn-warning(type='submit', style='height:70px;font-weight:900;font-size:26px;')
+        | 右轉倒數
         i.fa.fa-arrow-circle-right
+  br
+  .col-xs-12.col-sm-12
+    hr
+    h1.text-center(style='font-weight:900;font-size:40px;') 產品專利申請中
+  
   
